@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Five beginner-friendly HTML and Bootstrap form exercises. Assignment 4 by Zhanserik Zharylgassyn.">
+  <title>Form Studio | Assignment 4</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="brand" href="#">form<span class="brand-dot">.</span>studio</a>
+      <span class="small-label header-note">Web technologies / Assignment 04</span>
+    </div>
+  </header>
+  <main class="container">
+    <div class="hero row align-items-center">
+      <div class="col-md-8">
+        <div class="small-label">A little practice. A lot of possibility.</div>
+        <h1>Good forms.<br><span>Great first impressions.</span></h1>
+        <p>Five small exercises in making forms clear, useful, and easy to fill in. Built with HTML, CSS, and Bootstrap.</p>
+      </div>
+      <div class="col-md-4 hero-art" aria-hidden="true">
+        <div class="art-card"><strong>Make yourself at home.</strong><div class="art-line"></div><div class="art-line"></div><div class="art-line" style="width: 65%"></div></div>
+        <span class="art-check">&#10003;</span>
+      </div>
+    </div>
+    <nav class="task-nav" aria-label="Assignment tasks">
+      <a href="#task0">00 / Basic form</a><a href="#task1">01 / HTML5 validation</a><a href="#task2">02 / Bootstrap styling</a><a href="#task3">03 / Validation feedback</a><a href="#task4">04 / Registration</a>
+    </nav>
+    <!-- Task 0: The first hello. -->
+    <section id="task0" class="task" aria-labelledby="title0">
+      <div class="row g-0">
+        <div class="col-md-4"><div class="task-info">
+          <div class="small-label">Part 1</div><div class="number">00.</div>
+          <h2 id="title0">The first hello.</h2><p>A basic contact form. Three fields, clear labels, and one submit button.</p>
+          <span class="concept">label</span><span class="concept">input</span><span class="concept">textarea</span>
+        </div></div>
+        <div class="col-md-8"><div class="form-panel">
+          <h3 class="form-title">Say hello.</h3>
+          <p class="form-intro">Have an idea or a question? Start here.</p>
+          <form class="basic-form" action="#task0" method="get">
+            <label for="name0">Name</label>
+            <input id="name0" type="text" autocomplete="name">
+            <label for="email0">Email</label>
+            <input id="email0" type="email" autocomplete="email">
+            <label for="message0">Message</label>
+            <textarea id="message0" rows="4"></textarea>
+            <button type="submit">Submit message &#8599;</button>
+          </form>
+          <p class="form-text mt-3">A simple form with a label for every field. Demo only; submission reloads this page without sending or saving your entries.</p>
+        </div></div>
+      </div>
+    </section>
+    <!-- Task 1: A few ground rules. -->
+    <section id="task1" class="task" aria-labelledby="title1">
+      <div class="row g-0">
+        <div class="col-md-4"><div class="task-info">
+          <div class="small-label">Part 1</div><div class="number">01.</div>
+          <h2 id="title1">A few ground rules.</h2><p>Let the browser handle empty fields, email formats, and text length. No JavaScript needed.</p>
+          <span class="concept">required</span><span class="concept">type="email"</span><span class="concept">maxlength</span>
+        </div></div>
+        <div class="col-md-8"><div class="form-panel">
+          <h3 class="form-title">Say hello.</h3>
+          <p class="form-intro">Have an idea or a question? Start here.</p>
+          <form class="basic-form" action="#task1" method="get">
+            <label for="name1">Name</label>
+            <input id="name1" type="text" autocomplete="name" required minlength="2" maxlength="60">
+            <label for="email1">Email</label>
+            <input id="email1" type="email" autocomplete="email" required>
+            <label for="message1">Message</label>
+            <textarea id="message1" rows="4" required minlength="10" maxlength="500"></textarea>
+            <button type="submit">Submit message &#8599;</button>
+          </form>
+          <p class="form-text mt-3">Try submitting empty fields or an invalid email. Message: 10-500 characters. Demo only; submission reloads this page without sending or saving your entries.</p>
+        </div></div>
+      </div>
+    </section>
+    <!-- Task 2: A little polish. -->
+    <section id="task2" class="task" aria-labelledby="title2">
+      <div class="row g-0">
+        <div class="col-md-4"><div class="task-info">
+          <div class="small-label">Part 2</div><div class="number">02.</div>
+          <h2 id="title2">A little polish.</h2><p>Bootstrap gives the contact form a neat grid, consistent inputs, placeholders, and useful helper text.</p>
+          <span class="concept">form-control</span><span class="concept">row / col</span><span class="concept">form-text</span>
+        </div></div>
+        <div class="col-md-8"><div class="form-panel">
+          <h3 class="form-title">Let's talk.</h3><p class="form-intro">A little more structure. The same friendly hello.</p>
+          
+          <form class="row g-3 " action="#task2" method="get">
+            <div class="col-sm-6"><label for="name2" class="form-label">Name</label>
+              <input id="name2" class="form-control" type="text" required minlength="2" maxlength="60" placeholder="Your name" autocomplete="name">
+              
+              </div>
+            <div class="col-sm-6"><label for="email2" class="form-label">Email</label>
+              <input id="email2" class="form-control" type="email" required placeholder="you@example.com" autocomplete="email">
+              
+              </div>
+            <div class="col-12"><label for="message2" class="form-label">Message</label>
+              <textarea id="message2" class="form-control" rows="4" required minlength="10" maxlength="500" placeholder="Tell us what you have in mind..." aria-describedby="message2-help"></textarea>
+              
+              <div id="message2-help" class="form-text">10-500 characters. Keep it short and clear.</div></div>
+            <div class="col-12"><button class="btn btn-primary" type="submit">Submit message &#8599;</button></div>
+          </form>
+          <p class="form-text mt-3">Demo only; submission reloads this page without sending or saving your entries.</p>
+        </div></div>
+      </div>
+    </section>
+    <!-- Task 3: Helpful feedback. -->
+    <section id="task3" class="task" aria-labelledby="title3">
+      <div class="row g-0">
+        <div class="col-md-4"><div class="task-info">
+          <div class="small-label">Part 2</div><div class="number">03.</div>
+          <h2 id="title3">Helpful feedback.</h2><p>See Bootstrap's valid and invalid classes in the examples. The editable form uses native CSS validation states to show feedback after interaction.</p>
+          <span class="concept">is-valid</span><span class="concept">is-invalid</span><span class="concept">:user-invalid</span>
+        </div></div>
+        <div class="col-md-8"><div class="form-panel">
+          <h3 class="form-title">Let's talk.</h3><p class="form-intro">A little more structure. The same friendly hello.</p>
+          <div class="class-example"><p class="small-label mb-3">Bootstrap class examples (read-only)</p><div class="row g-3"><div class="col-sm-6"><label for="example-good" class="form-label">Valid example</label><input id="example-good" class="form-control is-valid" type="email" value="hello@example.com" readonly aria-describedby="example-ok"><div id="example-ok" class="valid-feedback">Looks good!</div></div><div class="col-sm-6"><label for="example-bad" class="form-label">Invalid example</label><input id="example-bad" class="form-control is-invalid" type="email" value="hello@" readonly aria-invalid="true" aria-describedby="example-error"><div id="example-error" class="invalid-feedback">Enter a valid email.</div></div></div></div>
+          <form class="row g-3 css-validation" action="#task3" method="get">
+            <div class="col-sm-6"><label for="name3" class="form-label">Name</label>
+              <input id="name3" class="form-control" type="text" required minlength="2" maxlength="60" placeholder="Your name" autocomplete="name" aria-describedby="name3-error name3-ok">
+              <div id="name3-error" class="invalid-feedback">Enter a name with at least 2 characters.</div><div id="name3-ok" class="valid-feedback">Looks good!</div>
+              </div>
+            <div class="col-sm-6"><label for="email3" class="form-label">Email</label>
+              <input id="email3" class="form-control" type="email" required placeholder="you@example.com" autocomplete="email" aria-describedby="email3-error email3-ok">
+              <div id="email3-error" class="invalid-feedback">Email is required. Enter a valid address.</div><div id="email3-ok" class="valid-feedback">Looks good!</div>
+              </div>
+            <div class="col-12"><label for="message3" class="form-label">Message</label>
+              <textarea id="message3" class="form-control" rows="4" required minlength="10" maxlength="500" placeholder="Tell us what you have in mind..." aria-describedby="message3-help message3-error message3-ok"></textarea>
+              <div id="message3-error" class="invalid-feedback">Write a message with 10-500 characters.</div><div id="message3-ok" class="valid-feedback">Looks good!</div>
+              <div id="message3-help" class="form-text">10-500 characters. Keep it short and clear.</div></div>
+            <div class="col-12"><button class="btn btn-primary" type="submit">Submit message &#8599;</button></div>
+          </form>
+          <p class="form-text mt-3">Try invalid and valid entries, then leave the field or submit to see feedback. Demo only; submission reloads this page without sending or saving your entries.</p>
+        </div></div>
+      </div>
+    </section>
+    <!-- Task 4: Make it yours. -->
+    <section id="task4" class="task" aria-labelledby="title4">
+      <div class="row g-0">
+        <div class="col-md-4"><div class="task-info">
+          <div class="small-label">Part 3</div><div class="number">04.</div>
+          <h2 id="title4">Make it yours.</h2><p>A responsive registration form with personal details, choices, and native validation. Use Reset to start again.</p>
+          <span class="concept">Bootstrap Grid</span><span class="concept">minlength</span><span class="concept">radio / checkbox</span>
+        </div></div>
+        <div class="col-md-8"><div class="form-panel">
+          <h3 class="form-title">Find your people.</h3><p class="form-intro">Join the creative club. Fields marked * are required.</p>
+          <form class="row g-3 css-validation" action="#task4" method="get">
+<div class="col-sm-6"><label for="first-name" class="form-label">First name *</label>
+              <input id="first-name" class="form-control" type="text" required minlength="2" maxlength="60" autocomplete="given-name" placeholder="First name" aria-describedby="first-name-error first-name-ok">
+              <div id="first-name-error" class="invalid-feedback">Enter at least 2 characters.</div><div id="first-name-ok" class="valid-feedback">Looks good!</div>
+              </div>
+<div class="col-sm-6"><label for="last-name" class="form-label">Last name *</label>
+              <input id="last-name" class="form-control" type="text" required minlength="2" maxlength="60" autocomplete="family-name" placeholder="Last name" aria-describedby="last-name-error last-name-ok">
+              <div id="last-name-error" class="invalid-feedback">Enter at least 2 characters.</div><div id="last-name-ok" class="valid-feedback">Looks good!</div>
+              </div>
+<div class="col-12"><label for="register-email" class="form-label">Email *</label>
+              <input id="register-email" class="form-control" type="email" required autocomplete="email" placeholder="you@example.com" aria-describedby="register-email-error register-email-ok">
+              <div id="register-email-error" class="invalid-feedback">Enter a valid email address.</div><div id="register-email-ok" class="valid-feedback">Looks good!</div>
+              </div>
+<div class="col-sm-6"><label for="password" class="form-label">Password *</label>
+              <input id="password" class="form-control" type="password" required minlength="8" maxlength="64" autocomplete="new-password" aria-describedby="password-error password-ok password-help">
+              <div id="password-error" class="invalid-feedback">Use 8-64 characters.</div><div id="password-ok" class="valid-feedback">Looks good!</div>
+              <div id="password-help" class="form-text">8-64 characters.</div></div>
+<div class="col-sm-6"><label for="confirm-password" class="form-label">Confirm password *</label>
+              <input id="confirm-password" class="form-control" type="password" required minlength="8" maxlength="64" autocomplete="new-password" aria-describedby="confirm-password-error confirm-password-ok confirm-password-help">
+              <div id="confirm-password-error" class="invalid-feedback">Use 8-64 characters.</div><div id="confirm-password-ok" class="valid-feedback">Looks good!</div>
+              <div id="confirm-password-help" class="form-text">Re-enter your password. This HTML-only demo cannot check a match.</div></div>
+
+            <div class="col-12"><fieldset><legend>Gender *</legend><div class="d-flex flex-wrap gap-3">
+              <div class="form-check"><input class="form-check-input" id="gender-woman" type="radio" name="gender" value="woman" required><label class="form-check-label" for="gender-woman">Woman</label></div>
+              <div class="form-check"><input class="form-check-input" id="gender-man" type="radio" name="gender" value="man" required><label class="form-check-label" for="gender-man">Man</label></div>
+              <div class="form-check"><input class="form-check-input" id="gender-other" type="radio" name="gender" value="other" required><label class="form-check-label" for="gender-other">Other</label></div>
+              <div class="form-check"><input class="form-check-input" id="gender-private" type="radio" name="gender" value="prefer-not-to-say" required><label class="form-check-label" for="gender-private">Prefer not to say</label></div>
+            </div></fieldset></div>
+            <div class="col-12"><fieldset><legend>Hobbies <span class="fw-normal text-secondary">(optional)</span></legend><div class="d-flex flex-wrap gap-3">
+              <div class="form-check"><input class="form-check-input" id="hobby-art" type="checkbox" value="art"><label class="form-check-label" for="hobby-art">Art & design</label></div>
+              <div class="form-check"><input class="form-check-input" id="hobby-music" type="checkbox" value="music"><label class="form-check-label" for="hobby-music">Music</label></div>
+              <div class="form-check"><input class="form-check-input" id="hobby-sports" type="checkbox" value="sports"><label class="form-check-label" for="hobby-sports">Sports</label></div>
+              <div class="form-check"><input class="form-check-input" id="hobby-reading" type="checkbox" value="reading"><label class="form-check-label" for="hobby-reading">Reading</label></div>
+            </div></fieldset></div>
+            <div class="col-12"><label for="country" class="form-label">Country *</label><select id="country" class="form-select" required aria-describedby="country-error country-ok"><option value="">Choose your country</option><option value="KZ">Kazakhstan</option><option value="KG">Kyrgyzstan</option><option value="UZ">Uzbekistan</option><option value="TR">T&uuml;rkiye</option><option value="US">United States</option><option value="other">Other</option></select><div id="country-error" class="invalid-feedback">Choose a country.</div><div id="country-ok" class="valid-feedback">Looks good!</div></div>
+            <div class="col-12 d-flex gap-2"><button class="btn btn-primary" type="submit">Submit registration &#8599;</button><button class="btn btn-outline-secondary" type="reset">Reset</button></div>
+          </form>
+          <p class="form-text mt-3">Demo only; submitting reloads this page. No account is created and your personal details are not saved.</p>
+
+        </div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="container footer d-flex flex-wrap justify-content-between gap-2"><span>form.studio / An exercise in thoughtful forms.</span><span>Zhanserik Zharylgassyn &middot; IT-2501 &middot; Assignment 04</span></footer>
+</body>
+</html>
